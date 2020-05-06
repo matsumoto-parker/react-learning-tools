@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.brand-logo {
+  color: #fff;
+}
+
+.right {
+  display: flex;
+  margin-right: 10px;
+}
+
+.nav-btn {
+  margin-right: 20px;
+  color: #fff;
+}
+
+.btn {
+  color: #fff;
+}

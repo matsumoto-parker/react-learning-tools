@@ -3,10 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
+import SignedInLinks from './SignedInLinks';
+import SignedOutLinks from './SignedOutLinks';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,26 +24,16 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ backgroundColor: '#00aa7a' }}>
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+            <Link to="/" className="brand-logo">
+              ReactLearningTools
+            </Link>
           </Typography>
-          <Button color="inherit">Login</Button>
+          <SignedInLinks />
+          <SignedOutLinks />
         </Toolbar>
-        <div className="container">
-          <Link to="/" className="brand-logo">
-            ReactLearningTools
-          </Link>
-        </div>
       </AppBar>
     </div>
   );
